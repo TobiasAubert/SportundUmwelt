@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 
 df = pd.read_csv("src/results-survey926142.csv")
-# print(df.head())
 
 # -------------- Clean the DataFrame --------------
 #removing unnecessary columns
@@ -60,11 +59,13 @@ for bar in bars:
     percent = (count / total) * 100
     label = f'{count} ({percent:.1f}%)'
     plt.text(bar.get_width() + 0.05, bar.get_y() + bar.get_height()/2,
-             label, va='center', fontsize=10)
+             label, va='center', fontsize=12)
 
-plt.xlabel("Anzahl")
-plt.ylabel("Sportart")
-plt.title("Häufigkeit der Hauptsportarten")
+plt.xlabel("Anzahl", fontsize=12)
+plt.ylabel("Sportart", fontsize=12)
+plt.title("Häufigkeit der Hauptsportarten", fontsize=14)
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=12)
 plt.gca().invert_yaxis()  # Show most frequent sport at the top
 plt.gca().spines['right'].set_visible(False)
 plt.gca().spines['top'].set_visible(False)
