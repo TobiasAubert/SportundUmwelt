@@ -19,7 +19,7 @@ fig, ax = plt.subplots(figsize=(10, 6))
 ax.bar(
     x_vals,
     df['Arithmetic mean'],
-    color='lightgray',
+    color='#c8102e', 
     edgecolor='black',
     width=0.6,
     label='Mittelwert'
@@ -31,19 +31,20 @@ ax.errorbar(
     df['Arithmetic mean'],
     yerr=df['Standard deviation'],
     fmt='o',
-    color='tab:blue',
+    color='#780018',
     capsize=5,
     label='± Standardabweichung'
 )
 
 # Formatting
 ax.set_xticks(x_vals)
-ax.set_xticklabels(df['Motivation'], rotation=45, ha='right')
-ax.set_ylabel("Mittelwert\n(1 = nicht wichtig, 5 = sehr wichtig)")
-ax.set_ylim(1, 5.5)
-ax.set_title("Motivationsfaktoren: Mittelwerte mit Standardabweichung")
+ax.set_xticklabels(df['Motivation'], rotation=45, ha='right', fontsize=16)
+ax.set_ylabel("Mittelwert\n(1 = nicht wichtig, 5 = sehr wichtig)", fontsize=16)
+ax.tick_params(axis='y', labelsize=14)  # y-Achse
+ax.set_ylim(1, 5.5,)
+ax.set_title("Motivationsfaktoren: Mittelwerte mit Standardabweichung", fontsize=16)
 ax.grid(True, axis='y')
-ax.legend()
+ax.legend(fontsize=16)
 
 plt.tight_layout()
 # plt.show()

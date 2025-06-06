@@ -89,12 +89,12 @@ df_cleaned.loc[24, "Wie häufig nutzt du die folgenden Verkehrsmittel durchschni
 # Gesamthäufigkeit für jedes Verkehrsmittel berechnen (NaN werden ignoriert)
 # Einheitliche Farben – abgestuft nach Umweltfreundlichkeit
 custom_colors = {
-    'Zu Fuß': '#a1d99b',                # sehr hellgrün
-    'Fahrrad': '#31a354',               # grün
-    'Öffentliche Verkehrsmittel': "#7ec6f0",  # mittelblau
-    'Motorrad/Roller':"#857ecc" ,       # violett (auch hoch)
-    'Auto (Fahrgemeinschaft)': "#5645b6",  # etwas heller
-    'Auto (allein)': "#460a6b",         # dunkelviolett (hohe Emissionen)
+    'Zu Fuß': '#f4a6ab',                 # sehr helles Rosa-Rot (niedrigste Emission)
+    'Fahrrad': '#ee5f66',                # rosarot / hellrot
+    'Öffentliche Verkehrsmittel': '#e03440',  # klares Rot (mittel)
+    'Motorrad/Roller': '#c8102e',        # Standard-Rot (wie im Bild)
+    'Auto (Fahrgemeinschaft)': '#a20d26',  # dunkleres Rot
+    'Auto (allein)': '#780018',          # sehr dunkles Rot (höchste Emission)
 }
 
 
